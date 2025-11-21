@@ -385,7 +385,7 @@ async def handle_goals_collection(message: Message, state: FSMContext) -> None:
     
     # Обработка ввода целей
     scenario_manager = get_scenario_manager()
-    response_msg, updated_goals, finished = await scenario_manager.process_goals_input(
+    response_msg, updated_goals, finished = scenario_manager.process_goals_input(
         message.text,
         scenario_state.all_goals
     )
@@ -418,7 +418,7 @@ async def handle_goals_selection(message: Message, state: FSMContext) -> None:
         return
     
     scenario_manager = get_scenario_manager()
-    response_msg, selected_goals_list, success = await scenario_manager.process_goals_selection(
+    response_msg, selected_goals_list, success = scenario_manager.process_goals_selection(
         message.text,
         scenario_state.all_goals
     )

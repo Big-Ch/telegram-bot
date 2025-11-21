@@ -108,7 +108,7 @@ class GoalSettingScenario:
             "Когда закончишь, напиши <b>\"Готово\"</b> или <b>\"Завершить\"</b>."
         )
     
-    async def process_goals_input(self, user_input: str, current_goals: List[str]) -> tuple[str, List[str], bool]:
+    def process_goals_input(self, user_input: str, current_goals: List[str]) -> tuple[str, List[str], bool]:
         """
         Обработка ввода целей от пользователя
         
